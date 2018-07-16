@@ -269,7 +269,7 @@ class DragRace extends React.Component {
         },
         {
           name: "Milan",
-          priece: 65
+          price: 65
         },
         {
           name: "Sahara Davenport",
@@ -301,7 +301,7 @@ class DragRace extends React.Component {
         },
         {
           name: "Dida Ritz",
-          priece: 55
+          price: 55
         },
         {
           name: "The Vixen",
@@ -396,7 +396,7 @@ class DragRace extends React.Component {
           price: 30
         },
         {
-          name: "Lineysha Spax",
+          name: "Lineysha Sparx",
           price: 30
         },
         {
@@ -548,6 +548,7 @@ class DragRace extends React.Component {
   render() {
     return (
       <div>
+        <h1 style={{ color: "hotpink" }}>RuPaul's Drag Race Fantasy Draft</h1>
         <select onChange={this.addQueen}>
           {this.state.queens.map(queen => (
             <option value={queen.name}>
@@ -560,7 +561,9 @@ class DragRace extends React.Component {
           Funds spent: <span>${this.state.cost},000</span>
         </h1>
         {this.state.cost > 1000 ? (
-          <h2 style={{ color: "red" }}>Salary cap exceeded.</h2>
+          <h2 style={{ color: "red" }}>
+            Salary cap exceeded by ${this.state.cost - 1000},000
+          </h2>
         ) : (
           <h2 style={{ color: "green" }}>
             ${1000 - this.state.cost},000 remaining.
