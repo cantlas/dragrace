@@ -1,2 +1,0 @@
-# dragrace
-Created with CodeSandbox
